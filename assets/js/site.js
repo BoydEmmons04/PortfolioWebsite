@@ -128,6 +128,48 @@ function renderProjects() {
   });
 }
 
+function applyPanelRevealAnimations() {
+  const panels = document.querySelectorAll(".glass-panel:not(.project-modal__panel)");
+
+  panels.forEach((panel, index) => {
+    if (panel.classList.contains("reveal")) {
+      return;
+    }
+
+    panel.classList.add("reveal");
+
+    const delayClass = `reveal-delay-${Math.min((index % 3) + 1, 3)}`;
+    panel.classList.add(delayClass);
+  });
+}
+
+function applyTextRevealAnimations() {
+  const textElements = document.querySelectorAll(
+    [
+      "main h1",
+      "main h2",
+      "main h3",
+      "main p",
+      "main li",
+      "main strong",
+      "main .project-card__cta",
+      "header .nav__brand",
+      "header .nav__link",
+      "footer p",
+      "footer a"
+    ].join(", "),
+  );
+
+  textElements.forEach((element, index) => {
+    if (element.classList.contains("reveal-text")) {
+      return;
+    }
+
+    element.classList.add("reveal-text");
+    element.style.animationDelay = `${80 + (index % 8) * 45}ms`;
+  });
+}
+
 function renderProjectModal() {
   const modalRoot = document.createElement("div");
   modalRoot.className = "project-modal-root";
@@ -228,6 +270,8 @@ function init() {
   renderHeader();
   renderFooter();
   renderProjects();
+  applyPanelRevealAnimations();
+  applyTextRevealAnimations();
   renderProjectModal();
   bindProjectInteractions();
 }
