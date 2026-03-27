@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Standalone splash page with a full-screen background and centered JJ OS artwork."
+    />
+    <title>Portfolio | Splash</title>
+    <link rel="preload" as="image" href="../background_browser.jpg" />
+    <link rel="preload" as="image" href="../JJ_OS.png" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow: hidden;
+        background-color: #020406;
+        background-image: url("../background_browser.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .splash {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        isolation: isolate;
+      }
+
+      .splash::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.12),
+          rgba(0, 0, 0, 0.28)
+        );
+        z-index: -1;
+      }
+
+      .splash__mark {
+        width: min(42vw, 520px);
+        min-width: 220px;
+        height: auto;
+        object-fit: contain;
+        filter:
+          drop-shadow(0 26px 60px rgba(0, 0, 0, 0.55))
+          drop-shadow(0 0 24px rgba(255, 255, 255, 0.45));
+      }
+
+      @media (max-width: 640px) {
+        .splash__mark {
+          width: min(72vw, 360px);
+          min-width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="splash" aria-label="Splash page">
+      <img
+        class="splash__mark"
+        src="../JJ_OS.png"
+        alt="JJ OS"
+        fetchpriority="high"
+        decoding="sync"
+      />
+    </main>
+  </body>
+</html>
