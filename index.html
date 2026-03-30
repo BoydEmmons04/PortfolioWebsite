@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Personal portfolio featuring selected projects, professional experience highlights, and contact information."
+      content="Simple portfolio landing page for Stephen Emmons with a short bio and contact details."
     />
     <title>Portfolio | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,78 +21,57 @@
       <header class="site-header" data-site-header></header>
 
       <main>
-        <section class="hero section">
-          <div class="hero__content glass-panel">
-            <p class="eyebrow">Available for full-time roles and internships</p>
-            <h1 style="padding-bottom: 60px">
-              Designing and building secure digital products for fun
-            </h1>
-
-            <div class="hero__actions">
-              <a class="button button--primary" href="projects.html"
-                >View Projects</a
-              >
-              <a class="button button--secondary" href="contact.html"
-                >Contact Me</a
-              >
+        <section class="section contact-layout">
+          <div class="glass-panel profile-card">
+            <div class="profile-card__image-wrap">
+              <img
+                src="assets/img/Stephen_Emmons.png"
+                alt="Portrait of Stephen Emmons"
+                class="profile-card__image"
+              />
             </div>
-          </div>
-
-          <aside class="hero__spotlight glass-panel">
-            <p class="eyebrow">What I Focus On</p>
-            <ul class="hero__metrics">
-              <li>
-                <strong>Cybersecurity</strong>
-                <span>A deep fascination with how protect information</span>
-              </li>
-              <li>
-                <strong>Backend Systems</strong>
-                <span
-                  >Designing and implementing efficient backend solutions.</span
-                >
-              </li>
-              <li>
-                <strong>Full-Stack Delivery</strong>
-                <span
-                  >Building complete experiences from concept to
-                  implementation.</span
-                >
-              </li>
-            </ul>
-          </aside>
-        </section>
-
-        <section class="section">
-          <div class="section-heading">
-            <div>
-              <h2>Featured Work</h2>
-            </div>
-            <a class="text-link" href="projects.html">Browse all projects</a>
-          </div>
-          <div class="project-grid" data-project-list="featured"></div>
-        </section>
-
-        <section class="section section--split">
-          <div class="glass-panel">
-            <p class="eyebrow">Why Employers Work With Me</p>
-            <h2>
-              A love for learning new technologies and a skill for picking up
-              new concepts quickly.
-            </h2>
-            <p>
-              I care about learining new technologies and concepts, and I have a
-              track record of picking up new skills quickly. I have a strong
-              foundation in cybersecurity and backend development, and I am
-              always eager to expand my knowledge and take on new challenges.
+            <p class="eyebrow">Computer Science Student</p>
+            <h1>Stephen Emmons</h1>
+            <p class="profile-card__role">
+              Curious builder who loves learning new technologies.
             </p>
           </div>
-          <div class="glass-panel">
-            <p class="eyebrow">Future Expansion</p>
-            <h2>This site is designed for growth.</h2>
-            <p>
-              I plan to expand this portfolio over time to add all my new
-              projects into one centralized location.
-            </p>
+
+          <div class="contact-stack">
+            <section class="glass-panel">
+              <p class="eyebrow">About Me</p>
+              <h2>Learning, building, and growing through every project.</h2>
+              <p>
+                I am a computer science student who loves learning new
+                technologies and exploring how systems work. I enjoy building
+                software, solving problems, and using each project as a chance
+                to grow as a developer.
+              </p>
+              <p>
+                My goal is to keep expanding my skills through hands-on work,
+                new tools, and real-world challenges that push me to keep
+                improving.
+              </p>
+            </section>
+
+            <section class="glass-panel">
+              <p class="eyebrow">Contact</p>
+              <h2>Reach out anytime.</h2>
+              <div class="contact-list">
+                <a href="mailto:bemmons04@gmail.com">
+                  <span>Email</span>
+                  <strong>bemmons04@gmail.com</strong>
+                </a>
+                <a href="tel:+12567241189">
+                  <span>Phone</span>
+                  <strong>+1 (256) 724-1189</strong>
+                </a>
+                <a href="contact.html">
+                  <span>More</span>
+                  <strong>View full contact page</strong>
+                </a>
+              </div>
+            </section>
           </div>
         </section>
       </main>
